@@ -51,8 +51,6 @@ public class VentanaMasterMind extends javax.swing.JFrame {
     private int minutos = 0;
     private int horas = 0;
 
-
-
     /**
      *
      */
@@ -166,6 +164,7 @@ public class VentanaMasterMind extends javax.swing.JFrame {
         }
         //Cambiamos el Alto del Panel Selector
         jPanelSelector.setSize(ANCHO_SELECTOR, posBotonesY);
+        jPanelSelector.repaint();
     }
     //Añade el Evento a la Matriz de Botones del Panel Selector
     private void addEventoBtnSelector(int posicion) {
@@ -270,6 +269,7 @@ public class VentanaMasterMind extends javax.swing.JFrame {
         }
         //Cambiamos el Ancho del Panel de Juego
         jPanelJugada.setSize(calculaAnchoPanelJugada(longitud), ALTO_JUGADA);
+        jPanelJugada.repaint();
     }
     //Añade el Evento a la Matriz de Botones del Panel de la Jugada
     private void addEventoBtnJugada(int fila, int colum) {
@@ -359,6 +359,7 @@ public class VentanaMasterMind extends javax.swing.JFrame {
 
         //Establecemos el Nuevo Tamaño
         jPanelResult.setSize(calculaAnchoPanelResultado(longitud), ALTO_JUGADA);
+        jPanelResult.repaint();
     }
 
     private void changeSizeVentana() {
